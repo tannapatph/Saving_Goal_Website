@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>วางแผนเก็บเงินเป้าหมาย | Saving Goal</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>วางแผนเก็บเงินเป้าหมาย <span class="emoji">💰</span></h1>
+      <p class="subtitle">
+        ใส่เป้าหมายของคุณ แล้วดูเลยว่าต้องเก็บเท่าไหร่ต่อเดือน / ต่อสัปดาห์ / ต่อวัน
+      </p>
+
+      <div class="chips">
+        <span class="chip">🎧 ซื้อหูฟัง</span>
+        <span class="chip">✈️ ไปเที่ยว</span>
+        <span class="chip">💻 โน้ตบุ๊กใหม่</span>
+      </div>
+    </header>
+
+    <form id="goal-form" class="card">
+      <div class="field-group">
+        <label>
+          ชื่อเป้าหมาย
+          <input
+            type="text"
+            id="goal-name"
+            placeholder="เช่น ไปญี่ปุ่น, ซื้อ iPad, ปูพื้นฐานลงทุน"
+          />
+        </label>
+      </div>
+
+      <div class="field-grid">
+        <label>
+          เป้าหมายเงินที่อยากได้ (บาท)
+          <input
+            type="number"
+            id="target-amount"
+            placeholder="เช่น 30000"
+            required
+          />
+        </label>
+
+        <label>
+          เงินที่มีอยู่แล้วตอนนี้ (บาท)
+          <input
+            type="number"
+            id="current-amount"
+            placeholder="ถ้าไม่มีให้ใส่ 0"
+            value="0"
+          />
+        </label>
+      </div>
+
+      <div class="field-group">
+        <label>
+          อยากเก็บให้ครบภายใน (เดือน)
+          <input
+            type="number"
+            id="months"
+            placeholder="เช่น 8"
+            required
+          />
+        </label>
+      </div>
+
+      <button type="submit">คำนวณเลย</button>
+    </form>
+
+    <section id="result" class="result hidden">
+      <h2>ผลการคำนวณ</h2>
+      <p id="summary"></p>
+      <ul>
+        <li id="per-month"></li>
+        <li id="per-week"></li>
+        <li id="per-day"></li>
+      </ul>
+    </section>
+
+    <section id="history" class="history">
+        <div class="history-header-row">
+            <h2>เป้าหมายที่เคยคำนวณ</h2>
+            <button type="button" id="clear-history-btn" class="btn-secondary">
+            ลบประวัติ
+            </button>
+        </div>
+        <p class="history-empty">ยังไม่มีเป้าหมายที่บันทึก</p>
+        <ul id="history-list"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
