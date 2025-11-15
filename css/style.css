@@ -259,3 +259,132 @@ button:active {
   background: #111827;
   border-color: #9ca3af;
 }
+
+.bot-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text describe for bot */
+.bot-text {
+  max-width: 420px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.bot-text h2 {
+  font-size: 24px;
+  margin-bottom: 0.5rem;
+}
+
+.bot-text ul {
+  padding-left: 1.2rem;
+  margin: 0.8rem 0 1.2rem;
+}
+
+.bot-text code {
+  background: #818080;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Button add friend Bot in LINE */
+.btn-line {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: #06c755;         /* Green LINE app*/
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.btn-line:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+/* Mockup chat zone*/
+.bot-mockup {
+  flex: 0 0 260px;
+}
+
+.phone-frame {
+  width: 260px;
+  height: 460px;
+  border-radius: 30px;
+  padding: 12px;
+  background: #111;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  height: 40px;
+  border-radius: 20px;
+  background: #222;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.chat-body {
+  flex: 1;
+  background: #1f2933;
+  border-radius: 22px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: hidden;
+  font-size: 13px;
+}
+
+/* bubble */
+.chat-bubble {
+  max-width: 90%;
+  padding: 8px 10px;
+  border-radius: 16px;
+  line-height: 1.4;
+}
+
+.chat-bubble.bot {
+  background: #374151;
+  color: #f9fafb;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+.chat-bubble.user {
+  background: #4ade80;
+  color: #064e3b;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+/* Provides flexible layout on mobile devices */
+@media (max-width: 768px) {
+  .bot-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .bot-text {
+    max-width: 100%;
+  }
+  
+  .bot-mockup {
+    align-self: center;
+  }
+}
